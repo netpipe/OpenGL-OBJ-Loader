@@ -31,9 +31,14 @@ void drawText(float x, float y, const char *s) {
 void display() {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glLoadIdentity();
-
     glTranslatef(0.0f, -0.8f, 1.5f);
     glRotatef(angle, 0.0f, 1.0f, 0.0f);
+
+        
+    gluLookAt(   	 0.0, -0.8, 1.0,   // camera position (above & back)
+   	 -1.0, 1.0, -1.0,   // look at center of model
+   	 0.0, 1.0, 0.0 );   // up vector
+
 
     for (size_t i = 0; i < model.meshes.size(); ++i) {
         const Mesh& mesh = model.meshes[i];
