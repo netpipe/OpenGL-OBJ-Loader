@@ -32,7 +32,7 @@ void display() {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glLoadIdentity();
 
-    glTranslatef(0.0f, 0.2f, 1.5f);
+    glTranslatef(0.0f, -0.8f, 1.5f);
     glRotatef(angle, 0.0f, 1.0f, 0.0f);
 
     for (size_t i = 0; i < model.meshes.size(); ++i) {
